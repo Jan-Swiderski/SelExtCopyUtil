@@ -16,7 +16,7 @@ jobs:
     - name: Install Dependencies
       run: pip install pyinstaller
     - name: Build Executable
-      run: pyinstaller --onefile --windowed --icon=icons/SelExtCopyUtil_ICON.ico --name=SelExtCopyUtil sel_ext_copy_util.py
+      run: pyinstaller --onefile --windowed --icon=icons/SelExtCopyUtil_ICON.ico --name=SelExtCopyUtil --add-data "icons/SelExtCopyUtil_ICON.ico;icons" sel_ext_copy_util.py
     - name: Upload Executable
       uses: actions/upload-artifact@v2
       with:
