@@ -1,0 +1,24 @@
+name: Build Windows Application
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build for Windows
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12.2'
+    - name: Install Dependencies
+      run: pip install pyinstaller
+    - name: Build Executable
+      run: pyinstaller --onefile --windowed --icon=icons/SelExtCopyUtil_ICON.ico --name=SelExtCopyUtil sel_ext_copy_util.py
+    - name: Upload Executable
+      uses: actions/upload-artifact@v2
+      with:
+        name: Windows-Executable
+        path: dist/SelExtCopyUtil.exe
