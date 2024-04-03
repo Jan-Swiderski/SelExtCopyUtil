@@ -18,10 +18,11 @@ jobs:
     - name: Build Application
       run: pyinstaller --onefile --windowed --icon=icons/SelExtCopyUtil_ICON.icns --name=SelExtCopyUtil --add-data="icons/SelExtCopyUtil_ICON.icns:icons" sel_ext_copy_util.py
     - name: Compress Application for Distribution
-      run: zip -r SelExtCopyUtil.zip dist/SelExtCopyUtil.app
+      run: |
+        cd dist
+        zip -r ../SelExtCopyUtil.zip SelExtCopyUtil.app
     - name: Upload Application
       uses: actions/upload-artifact@v2
       with:
         name: macOS-Application
         path: SelExtCopyUtil.zip
-        
