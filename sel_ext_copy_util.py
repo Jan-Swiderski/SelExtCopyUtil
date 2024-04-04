@@ -1,9 +1,8 @@
 import os
 import shutil
 import sys
-import platform
 from datetime import datetime
-from tkinter import Tk, Label, Entry, Button, filedialog, messagebox, ttk
+from tkinter import Tk, Label, Entry, Button, filedialog, messagebox, ttk, PhotoImage
 import threading
 
 def copy_files_with_extension(source_path: str, destination_path: str, extension: str, callback):
@@ -77,11 +76,9 @@ if __name__ == "__main__":
     # This includes setting up the UI components, event handlers, and starting the main event loop.
     root = Tk()
     root.title("SelExtCopyUtil")
-    
-    if platform.system() == "Windows":
-        root.iconbitmap(os.path.join(sys._MEIPASS, 'icons/SelExtCopyUtil_ICON.ico'))
-    elif platform.system() == "Darwin":
-        root.iconbitmap(os.path.join(sys._MEIPASS, 'icons/SelExtCopyUtil_ICON.icns'))
+
+    icon = PhotoImage(file=os.path.join(sys._MEIPASS, 'icons/SelExtCopyUtil_ICON.png'))
+    root.iconphoto(True, icon)
 
     root.geometry("600x200")
     root.grid_columnconfigure(1, weight=1)
