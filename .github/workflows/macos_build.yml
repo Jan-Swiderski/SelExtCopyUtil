@@ -1,0 +1,28 @@
+name: Build macOS Application
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build for macOS
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12.2'
+    - name: Install Dependencies
+      run: pip install pyinstaller
+    - name: Build Application
+      run: pyinstaller --onefile --windowed --icon=icons/SelExtCopyUtil_ICON.icns --name=SelExtCopyUtil --add-data="icons/SelExtCopyUtil_ICON.icns:icons" sel_ext_copy_util.py
+    - name: Compress Application for Distribution
+      run: |
+        cd dist
+        zip -r ../SelExtCopyUtil.zip SelExtCopyUtil.app
+    - name: Upload Application
+      uses: actions/upload-artifact@v2
+      with:
+        name: macOS-Application
+        path: SelExtCopyUtil.zip
