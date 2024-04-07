@@ -12,6 +12,23 @@ This project is designed to run with a standard Python environment, making it ac
 ### Prerequisites
 - **Python:** Ensure you have Python installed on your system. The project requires Python 3.6 or newer, but Python 3.12.2 is recommended for the best compatibility and performance. If you do not have Python installed, you can download it from [python.org](https://www.python.org/downloads/) or install it using your system's package manager. This project uses standard Python libraries, including `tkinter` for the GUI components, which is included in the standard Python distribution.
 
+## Downloading and Using the Built Version of the Application
+
+To download the latest release of the application, visit the ["Releases"](https://github.com/Jan-Swiderski/SelExtCopyUtil/releases) section on the GitHub page of the project and download the latest version for your operating system.
+
+After downloading, unzip the file and run the application. Usage instructions (README) are attached to the release. Below are the usage instructions for release v1.0.0.
+
+### Usage Instructions for Release v1.0.0
+
+1. **Open the Application**: Launch `SelExtCopyUtil` by executing the `.exe` file for Windows or `.app` for macOS.
+2. **Source Directory**: Click the "Browse..." button next to the "Source Directory" field to select the directory from which you want to copy files.
+3. **Destination Directory**: Click the "Browse..." button next to the "Destination Directory" field to select the target directory where files will be copied.
+4. **File Extension**: Enter the file extension of the files you wish to copy (e.g., `.txt`, `.jpg`). The application is case-insensitive and will match files with the extension in any case.
+5. **Folder Prefix**: (Optional) Enter a prefix for the name of the new folder that will be created in the destination directory. The folder's name will also include the current date in the selected format.
+6. **Select Date Format**: Choose a date format from the dropdown menu for the folder name in the destination directory. The available options are `YYYY-MM-DD`, `DD-MM-YYYY`, and `MM-DD-YYYY`.
+7. **Run**: Click the "Run" button to start the copying process. The application will create a new folder in the destination directory, named with the chosen prefix and date, and will copy all files with the specified extension into this folder.
+8. **Completion**: Once the copying process is completed, a message box will inform you of the success. The application will then automatically close.
+
 - **Environment:** You can use any standard Python environment, including virtual environments created with `venv` or `conda` environments. If you're using `conda`, you can create a new environment using the following command:
   ```
   conda create --name myenv python=3.12.2
