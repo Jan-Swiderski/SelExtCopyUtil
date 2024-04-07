@@ -6,12 +6,7 @@ s with the extension in any case.
 	**Folder Prefix**: Enter a prefix for the name of the new folder that will be created in the destination directory. The folder's name will also include the current date in the selected format.
 	**Select Date Format**: Choose a date format from the dropdown menu for the folder name in the destination directory. The available options are `YYYY-MM-DD`, `DD-MM-YYYY`, and `MM-DD-YYYY`.**Run**: Click the "Run" button to start the copying process. The application will create a new folder in the destination directory, named with the chosen prefix and date, and will copy all files with the specified extension into this folder.
 	**Completion**: Once the copying process is completed, a message box will inform you of the success. The application will then automatically close.
-## Running and editing the Python code
-### Setting up the Environment and Installation
-This project is designed to run with a standard Python environment, making it accessible and easy to set up. Here's how to get your environment ready and run the project.
-### Prerequisites
-- **Python:** Ensure you have Python installed on your system. The project requires Python 3.6 or newer, but Python 3.12.2 is recommended for the best compatibility and performance. If you do not have Python installed, you can download it from [python.org](https://www.python.org/downloads/) or install it using your system's package manager. This project uses standard Python libraries, including `tkinter` for the GUI components, which is included in the standard Python distribution.
-
+  
 ## Downloading and Using the Built Version of the Application
 
 To download the latest release of the application, visit the ["Releases"](https://github.com/Jan-Swiderski/SelExtCopyUtil/releases) section on the GitHub page of the project and download the latest version for your operating system.
@@ -29,6 +24,11 @@ After downloading, unzip the file and run the application. Usage instructions (R
 7. **Run**: Click the "Run" button to start the copying process. The application will create a new folder in the destination directory, named with the chosen prefix and date, and will copy all files with the specified extension into this folder.
 8. **Completion**: Once the copying process is completed, a message box will inform you of the success. The application will then automatically close.
 
+## Running and editing the Python code
+### Setting up the Environment and Installation
+This project is designed to run with a standard Python environment, making it accessible and easy to set up. Here's how to get your environment ready and run the project.
+### Prerequisites
+- **Python:** Ensure you have Python installed on your system. The project requires Python 3.6 or newer, but Python 3.12.2 is recommended for the best compatibility and performance. If you do not have Python installed, you can download it from [python.org](https://www.python.org/downloads/) or install it using your system's package manager. This project uses standard Python libraries, including `tkinter` for the GUI components, which is included in the standard Python distribution.
 - **Environment:** You can use any standard Python environment, including virtual environments created with `venv` or `conda` environments. If you're using `conda`, you can create a new environment using the following command:
   ```
   conda create --name myenv python=3.12.2
